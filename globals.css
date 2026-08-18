@@ -1,0 +1,38 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html, body {
+  background: #0B0E1A;
+  color: #E9E4D6;
+}
+
+.starfield {
+  background-image:
+    radial-gradient(1px 1px at 10% 20%, rgba(233,228,214,0.9), transparent),
+    radial-gradient(1px 1px at 80% 10%, rgba(233,228,214,0.7), transparent),
+    radial-gradient(1.5px 1.5px at 60% 70%, rgba(233,228,214,0.8), transparent),
+    radial-gradient(1px 1px at 30% 85%, rgba(233,228,214,0.6), transparent),
+    radial-gradient(1px 1px at 90% 60%, rgba(233,228,214,0.5), transparent),
+    radial-gradient(1.5px 1.5px at 45% 40%, rgba(233,228,214,0.9), transparent),
+    radial-gradient(1px 1px at 15% 55%, rgba(233,228,214,0.5), transparent);
+  background-repeat: repeat;
+  background-size: 600px 600px;
+}
+
+.reel {
+  transform-origin: center;
+}
+
+.reel-spin {
+  animation: reelspin 1.8s linear infinite;
+}
+
+@keyframes reelspin {
+  to { transform: rotate(360deg); }
+}
+
+::selection {
+  background: #F2C879;
+  color: #0B0E1A;
+}
